@@ -12,28 +12,25 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* main {
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
   background-color: black;
-} */
-
-body {
-  background-color: white;
-  color: black;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
 }
 
 body {
   margin: 0;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  background-color:rgb(0, 0, 0); 
 }
 
 h1 {
@@ -41,34 +38,14 @@ h1 {
   line-height: 1.1;
 }
 
-.card {
-  padding: 2em;
-}
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  /* text-align: center; */
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+}
+
+body.no-scroll, html.no-scroll {
+  overflow: hidden;
 }
 
 @media (prefers-color-scheme: light) {
@@ -79,43 +56,445 @@ button:focus-visible {
   a:hover {
     color: #747bff;
   }
-  button {
-    background-color: #f9f9f9;
+}
+
+#typewriter {
+  overflow: hidden; 
+  border-right: .15em solid; /* Agrega un borde vertical para simular un cursor */
+  white-space: nowrap; 
+  animation: typing 1s steps(40) ; /* Llama a la función typing */
+  align-self: center;
+}
+
+#subtitle {
+  visibility: hidden; /* Esconde el subtítulo hasta que termine de escribirse el título */
+  align-self: center;
+}
+
+@keyframes typing {
+  from {
+      width: 0; /* Start from no width */
   }
-}
-
-.image-container {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 50px;
-  background-color: black;
-  color: black;
-}
-
-.image {
-  width: 300px;
-  height: auto;
-  visibility: hidden; /* Hide the image initially */
-  animation: showImage 0s forwards;
-  position: sticky;
-}
-
-.image:nth-child(1) {
-  animation-delay: 0.5s;
-  top: 50px
-}
-
-.image:nth-child(2) {
-  animation-delay: 1s;
-  top: 100px
-}
-
-.image:nth-child(3) {
-  animation-delay: 1.5s;
-}
-
-@keyframes showImage {
   to {
-    visibility: visible;
+      width: auto; /* Increase width to fit content */
   }
 }
+
+ /* Importo fonts */
+  /* Rubik: Títulos (sujeto a cambios) */
+  @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+ /* IBM Plex Mono (bajada) */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
+  /* IBM Plex Sans (la que mas usamos) */
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+  
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: black;
+    background-image: url('/public/gifs/fondo_header.gif');
+    background-size:98% 99%;
+    background-position: center calc(50% - 20px); 
+    background-repeat: no-repeat; 
+    height: 100vh;
+    width:100%;
+  }
+
+  .headline { /* Título */
+    font-size: 60px;
+    line-height: 1.2;
+    font-weight: black;
+    text-align: center;
+    margin: 20px;
+    color:white;
+    font-family: 'Rubik';
+    width: 100%;
+    margin-top: 0%;
+  }
+
+  .subtitulo {
+    font-size: 50px;
+    line-height: 1.2;
+    font-family: 'Rubik';
+    color:white;
+    margin-top: 0%;
+  }
+
+  .subtitulo2 {
+    font-size: 35px;
+    line-height: 1.2;
+    font-family: 'Rubik';
+    color:white;
+    align-self:center;
+    text-align: center;
+  }
+
+  .subtitulo-graf1{
+    font-size: 35px;
+    line-height: 1.2;
+    font-family: 'Rubik';
+    color:white;
+    align-self:center;
+    text-align: center;
+    margin-top: 10%;
+  }
+
+  .subtitulo3 {
+    font-size: 40px;
+    line-height: 1.2;
+    font-family: 'Rubik';
+    color:white;
+    margin-top: 170px;
+    margin-bottom: 3%;
+    text-align: center;
+  }
+
+  .bajada { 
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin: 10px;
+    font-family: 'Rubik';
+    color:white
+  }
+ 
+  a { /* Nombres */
+    color:crimson;
+    font-family:'Rubik';
+    font-weight: bold;
+    text-decoration: underline;
+    z-index: 100;
+  }
+
+  .cuadroPrompt { /* acomoda el png */
+    visibility: hidden; 
+    position: absolute;
+    align-self: center;
+    margin-bottom: 35%;
+  }
+  
+  #textoPrompt {
+    font-size: 20px;
+    font-family: Arial;
+    color:black;
+    font-style: italic;
+    z-index: 10;
+    margin-bottom: 36%;
+    margin-right: 35%;
+  }
+
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%;
+  }
+
+
+  .intro-general { /* Introducción, hablamos sobre qué es la IA Generativa */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 150px; */
+    background-color: black;
+  }
+
+  .texto { /* Para todos los <p> */
+    text-align: justify;
+    font-family: Helvetica;
+    font-size: 20px;
+    color:white;
+    line-height: 2;
+    width: 900px;
+    background-color: black;
+    margin: auto;
+  }
+
+  .gif {
+    margin-top: -33%;
+  }
+  
+  .gif img {
+    width: 100%;
+    height: auto;
+  }
+
+  .container-grafico1 { /* Gráfico de líneas de Datawrapper */
+    margin-top: 100px;
+    margin-bottom: 100px;
+    background-color:black;
+  }
+
+  .grafico-progreso {
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* 2DA INTRO */
+
+  .foreground_container {
+    /* degradé */
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(87, 10, 10, 0.2), rgba(0, 0, 0, 0.8));
+    margin-top: 0%;
+  }
+
+  .epi_foreground { 
+    background-color:white;
+    border-radius: 25px; 
+    width: 30vw; 
+    color: black;
+    font-family: Helvetica;
+    font-size: 20px;
+    text-align: center;
+    padding:1.9%;
+  }
+
+  /* PRIMER GRAFICO */
+  .charts{
+  max-width: 50%;
+  height: auto; /* Ajusta automáticamente la altura según el ancho */
+  margin-left: 20%;
+  }
+  
+  .foreground_container2 {
+    padding-left: 50%;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 70px;
+  }
+
+  /* CUADRITO DEL COSTADO*/
+  .step_foreground2 {
+    display: flex;
+    justify-content: end;    
+    align-items: center;
+    height: 50vh;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 1em;
+    margin: 0 0 2em 0;
+    width: 60%;
+  }
+
+  /* parte negra del cuadradito*/
+  .epi_foreground2 {
+    padding: 20px;
+    max-width: 200px;
+    width: 55vw;
+    background-color: rgba(35, 33, 33, 0.5);
+    text-align: center;
+  }
+
+
+
+  /* SEGUNDO GRAFICO*/
+  .container-graf2 {
+    margin-top: 6%;
+  }
+
+  .generacion-imagenes {
+    background-color: black;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 100px;
+    display: flex;
+  }
+
+  .grafico2 {
+    max-width: 100%; /* Ajusta el tamaño máximo del gráfico */
+    height: auto; /* Ajusta automáticamente la altura según el ancho */
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+ 
+
+/* SECCIÓN DEL PAPA */
+.container-papa {
+  width: 1536px;
+  height: auto;
+  background-color: black;
+  align-items: center; 
+  justify-content: center; 
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.headline-papa { /* Título */
+  font-size: 35px;
+  line-height: 1.2;
+  font-weight: black;
+  text-align: center;
+  margin: 20px;
+  color:white;
+  font-family: 'Rubik';
+  width: 100%;
+  margin-top: 10%;
+}
+
+.tweets-papa {
+  margin-top: 50px;
+}
+
+.tweets-papa img {
+  width: 100%;
+  height: auto;
+}
+
+.fondo-fotos-papa {
+  position: relative;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  size-adjust: 100%;
+}
+
+.fondo-fotos-papa img {
+  width: 100%; /* Ajusta el ancho de la imagen */
+  height: auto; /* Ajusta la altura automáticamente */
+  object-fit: cover; /* Ajusta el ajuste del objeto según sea necesario */
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+}
+
+.fondo-container-rojo { /* Para los container de texto de la sección del Papa */
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+  
+.fondo-container-rojo img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+.que-dijo {
+  margin-top: 100px;
+  display: flex;
+  justify-content: center; /* Centers children horizontally */
+  align-items: center; /* Centers children vertically */
+  background-color: black;
+  text-align: center; 
+  flex-direction: column;
+  position: relative;
+  /* height: 100vh; */
+}
+
+.que-dijo img {
+  z-index: 1;
+}
+
+.texto2 {
+  font-size: 20px;
+  color: black;
+  /* align-self: center;
+  justify-self: center; */
+  /* background-color: greenyellow; */
+  font-family: Helvetica;
+  font-weight: 600;
+  font-style: italic;
+  z-index: 2;
+  position: relative;
+  top:-105px;
+  left: -17px;
+}
+
+.epi_foreground-papa { 
+  background-color: white;
+  border-radius: 25px; 
+  width: 30vw; 
+  color: black;
+  font-family: Helvetica;
+  font-size: 20px;
+  text-align: center;
+  padding:1.9%;
+}
+
+
+.foreground_container { /* Para el container de scroll Papa */
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  /* pointer-events: none; */
+  margin-top: 10%; 
+  margin-bottom: 10%;  
+  /* width: 1536px; */
+  width: 100%;
+  /* background-color: aquamarine; */
+  } 
+
+  .foreground_container-papa { /* Para el container de scroll Papa */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    /* pointer-events: none; */
+    margin-top: 10%; 
+    margin-bottom: 10%;  
+    /* width: 1536px; */
+    width: 100%;
+    /* background-color: aquamarine; */
+    } 
+  
+  .step_foreground { 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+    /* width:1536px; */
+    }
+
+  .step_foreground-papa { 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+    height: 100vh;
+  }
+  
+
+  .epi_foreground3 { 
+    background-color:white;
+    border-radius: 25px; 
+    width: 30vw; 
+    color:black;
+    font-family:Arial;
+    font-size: 18px;
+    text-align: center;
+    padding:1.9%;
+  }
+
+
+  .footer {
+    background-color: #1a1a1a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .footer-container {
+    margin: 0 auto;
+  }
+  
+  .atribucion {
+    font-size: 20px;
+    margin-bottom: 10px
+  }
