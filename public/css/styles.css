@@ -125,7 +125,6 @@ body.no-scroll, html.no-scroll {
   .subtitulo2 {
     font-size: 35px;
     line-height: 1.2;
-    font-family: 'Rubik';
     color:white;
     align-self:center;
     text-align: center;
@@ -134,7 +133,6 @@ body.no-scroll, html.no-scroll {
   .subtitulo-graf1{
     font-size: 35px;
     line-height: 1.2;
-    font-family: 'Rubik';
     color:white;
     align-self:center;
     text-align: center;
@@ -144,7 +142,6 @@ body.no-scroll, html.no-scroll {
   .subtitulo3 {
     font-size: 40px;
     line-height: 1.2;
-    font-family: 'Rubik';
     color:white;
     margin-top: 170px;
     margin-bottom: 3%;
@@ -156,13 +153,11 @@ body.no-scroll, html.no-scroll {
     font-weight: bold;
     text-align: center;
     margin: 10px;
-    font-family: 'Rubik';
     color:white
   }
  
   a { /* Nombres */
     color:crimson;
-    font-family:'Rubik';
     font-weight: bold;
     text-decoration: underline;
     z-index: 100;
@@ -240,7 +235,7 @@ body.no-scroll, html.no-scroll {
 
   .foreground_container {
     /* degradé */
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(87, 10, 10, 0.2), rgba(0, 0, 0, 0.8));
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(196, 33, 33, 0.301), rgba(0, 0, 0, 0.8));
     margin-top: 0%;
   }
 
@@ -337,7 +332,6 @@ body.no-scroll, html.no-scroll {
   text-align: center;
   margin: 20px;
   color:white;
-  font-family: 'Rubik';
   width: 100%;
   margin-top: 10%;
 }
@@ -389,13 +383,12 @@ body.no-scroll, html.no-scroll {
 .que-dijo {
   margin-top: 100px;
   display: flex;
-  justify-content: center; /* Centers children horizontally */
-  align-items: center; /* Centers children vertically */
+  justify-content: center;
+  align-items: center; 
   background-color: black;
   text-align: center; 
   flex-direction: column;
   position: relative;
-  /* height: 100vh; */
 }
 
 .que-dijo img {
@@ -405,9 +398,6 @@ body.no-scroll, html.no-scroll {
 .texto2 {
   font-size: 20px;
   color: black;
-  /* align-self: center;
-  justify-self: center; */
-  /* background-color: greenyellow; */
   font-family: Helvetica;
   font-weight: 600;
   font-style: italic;
@@ -434,12 +424,9 @@ body.no-scroll, html.no-scroll {
   flex-direction: column; 
   align-items: center; 
   justify-content: center; 
-  /* pointer-events: none; */
   margin-top: 10%; 
   margin-bottom: 10%;  
-  /* width: 1536px; */
   width: 100%;
-  /* background-color: aquamarine; */
   } 
 
   .foreground_container-papa { /* Para el container de scroll Papa */
@@ -447,12 +434,9 @@ body.no-scroll, html.no-scroll {
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    /* pointer-events: none; */
     margin-top: 10%; 
     margin-bottom: 10%;  
-    /* width: 1536px; */
     width: 100%;
-    /* background-color: aquamarine; */
     } 
   
   .step_foreground { 
@@ -460,7 +444,6 @@ body.no-scroll, html.no-scroll {
     justify-content: center;
     align-items: center; 
     height: 100vh;
-    /* width:1536px; */
     }
 
   .step_foreground-papa { 
